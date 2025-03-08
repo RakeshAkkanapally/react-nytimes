@@ -1,6 +1,6 @@
 require('@cypress/xpath')
 describe('Article Detail Page', () => {
-    it('should load the article detail page when clicked', () => {
+    it('should load the article detail page', () => {
 
       cy.visit(`http://localhost:5173/article/100000010038337`)
 
