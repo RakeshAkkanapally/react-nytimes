@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+# React NYTimes with Redux Toolkit and RTK Query
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple project using React, Vite, TypeScript, TailwindCSS, Redux Toolkit, and RTK Query to fetch and display articles from the NYTimes API. The application features an article list and an article detail view, with the ability to navigate between them.
 
-Currently, two official plugins are available:
+## Features
+- View a list of articles from the NYTimes API using RTK Query
+- Detailed view of each article
+- Loading and error handling states
+- Redux Toolkit for global state management
+- TypeScript for better development experience
+- TailwindCSS for responsive UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+Before you start, ensure that you have the following installed on your machine:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Node.js** (>=14.0.0) and **npm** (>=6.0.0)
+- **Git** (for version control)
+- **Vite** (for fast and optimized builds)
+- **TailwindCSS** (for utility-first CSS)
+- **Redux Toolkit** and **React-Redux** (for state management)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Clone the repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+git clone https://github.com/RakeshAkkanapally/react-nytimes.git
+cd react-nytimes
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 2. Install dependencies
+
+npm install
+
+VITE_NYTIMES_API_KEY=your-api-key
+
+### 3. Run server
+
+npm run dev
+
+### 4. Running tests
+
+npm run test
+
+
+

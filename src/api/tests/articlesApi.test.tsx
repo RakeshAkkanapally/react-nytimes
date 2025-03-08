@@ -14,11 +14,11 @@ const createTestStore = () =>
 
 describe("articlesApi", () => {
   beforeEach(() => {
-    fetchMock.resetMocks(); // Reset before each test
+    fetchMock.resetMocks();
   });
 
   afterEach(() => {
-    fetchMock.mockClear(); // Clear previous calls
+    fetchMock.mockClear();
   });
 
 
@@ -127,7 +127,7 @@ describe("articlesApi", () => {
   });
 
   it("handles missing results array in response", async () => {
-    const mockResponseWithoutResults = { results: undefined }; //  No 'results' field
+    const mockResponseWithoutResults = { results: undefined }; 
   
     fetchMock.mockResponseOnce(JSON.stringify(mockResponseWithoutResults));
   
@@ -141,7 +141,7 @@ describe("articlesApi", () => {
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
   
     expect(result.current.data).toEqual({
-      articles: [], //  Should return empty array when `results` is missing
+      articles: [], 
     });
   
     expect(fetchMock).toHaveBeenCalledTimes(1);
@@ -170,7 +170,7 @@ describe("articlesApi", () => {
   
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
   
-    expect(result?.current?.data?.articles[0].imageUrl).toBe(""); // Ensure empty string when media is missing
+    expect(result?.current?.data?.articles[0].imageUrl).toBe(""); 
   });
   
 });

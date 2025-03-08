@@ -21,7 +21,6 @@ describe("ArticleCard", () => {
       </MemoryRouter>
     );
 
-    // Check that title and abstract are displayed
     expect(screen.getByText(mockArticle.title)).toBeInTheDocument();
     expect(screen.getByText(mockArticle.abstract)).toBeInTheDocument();
   });
@@ -33,14 +32,12 @@ describe("ArticleCard", () => {
       </MemoryRouter>
     );
 
-    // Check if the image is rendered
     const image = screen.getByRole("img");
     expect(image).toHaveAttribute("src", mockArticle.imageUrl);
     expect(image).toHaveAttribute("alt", mockArticle.title);
   });
 
   it("should not render an image if imageUrl is not provided", () => {
-    // Create an article without an imageUrl
     const articleWithoutImage: Article = {
       ...mockArticle,
       imageUrl: "",
@@ -52,7 +49,6 @@ describe("ArticleCard", () => {
       </MemoryRouter>
     );
 
-    // Check that the image element is not in the document
     const image = screen.queryByRole("img");
     expect(image).not.toBeInTheDocument();
   });
@@ -64,7 +60,6 @@ describe("ArticleCard", () => {
       </MemoryRouter>
     );
 
-    // Check that the "Read More" button has the correct link
     const readMoreButton = screen.getByRole("link", {
       name: /read more/i,
     });
