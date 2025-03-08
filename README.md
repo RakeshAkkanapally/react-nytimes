@@ -1,4 +1,4 @@
-# React NYTimes with Redux Toolkit and RTK Query
+# NYTimes with React
 
 A simple project using React, Vite, TypeScript, TailwindCSS, Redux Toolkit, and RTK Query to fetch and display articles from the NYTimes API. The application features an article list and an article detail view, with the ability to navigate between them.
 
