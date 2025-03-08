@@ -14,7 +14,8 @@ interface Props {
 
 const ArticleCard: React.FC<Props> = ({ article }) => {
   return (
-    <Card className="shadow-lg rounded-lg">
+    <div className="shadow-lg rounded-lg">
+    <Card sx={{ height: '460px' }}>
       {article.imageUrl && (
         <CardMedia
           component="img"
@@ -22,27 +23,28 @@ const ArticleCard: React.FC<Props> = ({ article }) => {
           alt={article.title}
         />
       )}
-      <CardContent>
-        <Typography variant="h6" className="line-clamp-1">
-          {article.title}
+      <CardContent className="flex flex-col w-full h-screen p-4">
+        <Typography variant="h6" >
+          <p className="line-clamp-2">{article.title}
+            </p>
         </Typography>
         <Typography
           variant="body2"
-          className="text-gray-600 line-clamp-1"
-          noWrap
         >
-          {article.abstract}
+          <p className="text-gray-600 line-clamp-3"
+          >{article.abstract}
+          </p>
         </Typography>
         <Button
           component={Link}
           to={`/article/${article.id}`}
           variant="contained"
-          className="mt-4"
         >
           Read More
         </Button>
       </CardContent>
     </Card>
+    </div>
   );
 };
 

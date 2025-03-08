@@ -8,9 +8,9 @@ const ArticleList = () => {
 
   if (isLoading)
     return (
-      <Box className="flex justify-center items-center h-screen">
+      <p className="flex justify-center items-center w-screen h-screen">
         <CircularProgress />
-      </Box>
+      </p>
     );
 
   if (error) return <p className="text-center text-red-500">Error loading articles.</p>;
